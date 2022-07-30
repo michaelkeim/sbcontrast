@@ -17,7 +17,7 @@ in Keim et al. 2022 (https://arxiv.org/pdf/2109.09778.pdf).
 Usage
 -----
 sbcontrast may be run from the command line (set up in sbcontrast.py). Enter
-'sbcontrast -h' for help. It requires only a image fits file to run, however
+'sbcontrast -h' for help. It requires only an image fits file to run, however
 users should also specify a fits file containing masks for genuine sources
 (via -masks), otherwise no masks will be applied and the reported limit will
 not be as deep as the true value. Note that if the header does not contain
@@ -27,7 +27,7 @@ provide these (via -pix and -zp). Moreover, sbcontrast defaults to a 1sigma,
 Additional commands (-binmap and -fluctmap) to save the binned image map and 
 the final fluctuation map used to determine the limit are also available.
 
-sbcontrast mas also be run within python scripts, using numpy arrays rather
+sbcontrast may also be run within python scripts, using numpy arrays rather
 than fits files. Simply import the sblimit function from calclimit.py (e.g.
 'from sbcontrast import sblimit').
 
@@ -35,7 +35,7 @@ Note that the specified scale may be rounded so that the binning factors are
 integers. Note also that the accuracy of this limit is limited by data
 reduction - for scales exceeding that of background subtraction, genuine
 features above the calculated limit may have been removed. Moreover, at the
-single pixel scale  sbcontrast may diverge from the true rms due to
+single pixel scale sbcontrast may diverge from the true rms due to
 correlations introduced by re-sampling.
 
 Citation
