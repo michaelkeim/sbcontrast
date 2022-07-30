@@ -140,7 +140,6 @@ def sblimit( image, mask, pix_scale, zeropoint, sigma=1.0, scale_arcsec=60,
 
 	# Find limit
 	sig_adu = np.sqrt(biweight_midvariance(im_fluct, ignore_nan=True))*sigma/np.sqrt(1.125)
-	sig_adu *= sigma
 
 	# For the standard deviation of standard deviation, see:
 	# https://stats.stackexchange.com/questions/631/standard-deviation-of-standard-deviation
