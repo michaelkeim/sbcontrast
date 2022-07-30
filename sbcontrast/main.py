@@ -143,7 +143,7 @@ def sblimit( image, mask, pix_scale, zeropoint, sigma=1.0, scale_arcsec=60,
 
 	# For the standard deviation of standard deviation, see:
 	# https://stats.stackexchange.com/questions/631/standard-deviation-of-standard-deviation
-	dsig_adu = sig_adu / np.sqrt(2.*(im_fluct.size - 1.))*sigma
+	dsig_adu = sig_adu / np.sqrt(2.*(im_fluct.size - 1.))
 
 	# Convert limit in ADU to magnitudes
 	sb_lim = zeropoint - 2.5*np.log10(sig_adu / pix_scale**2)
@@ -242,7 +242,3 @@ def sbc():
 		np.save(args.fluctmap+'.npy', temp[2][0])
 	if args.binmap is not None:
 		np.save(args.binmap+'.npy', temp[2][1])
-
-
-
-
