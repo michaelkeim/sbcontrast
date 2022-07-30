@@ -217,7 +217,6 @@ def sbc():
 				zpcheck = True
 				break
 		if zpcheck == False:
-			print(knownrefs)
 			raise TypeError('Error obtaining zeropoint from header. '+
 							'Please enter value manually with -zp '+
 							'or provide correct reference with -zpref.')	
