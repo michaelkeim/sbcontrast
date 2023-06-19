@@ -138,6 +138,9 @@ def sblimit( image, mask, pix_scale, zeropoint, sigma=1.0, scale_arcsec=60,
 	# Remove edge
 	im_fluct[:,[0,-1]] = im_fluct[[0,-1]] = np.nan
 
+	# Remove unreal image regions (e.g. unmasked edges)
+	im_fluct = im_fluct[im_fluct != 0]
+
 	# Find limit
 	sig_adu = np.sqrt(biweight_midvariance(im_fluct, ignore_nan=True))*sigma/np.sqrt(1.125)
 
