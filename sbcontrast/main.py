@@ -153,7 +153,7 @@ def sblimit( image, mask, pix_scale, zeropoint, sigma=1.0, scale_arcsec=60,
 	dsb_lim = 2.5*np.log10(1.+1./np.sqrt(im_fluct.size))
 
 	if verbose:
-			print('The {0:.1f}-sigma limit on {1} arcsec scales is {2:.4f} +- {3:.4f} mag/arcsec2.'.format(sigma, scale_arcsec, sb_lim, dsb_lim))
+			print('The {0:.1f}-sigma limit on {1} arcsec scales is {2:.4f} mag/arcsec2.'.format(sigma, scale_arcsec, sb_lim))
 
 	return (sb_lim, dsb_lim), (sig_adu, dsig_adu), [im_fluct, im_loc]
 
