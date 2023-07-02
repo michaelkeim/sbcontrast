@@ -6,7 +6,7 @@ with open('README.txt', 'r') as file:
 setuptools.setup(
 	name='sbcontrast',
 	packages=['sbcontrast'],
-	version='0.1.0',
+	version='1.0.2',
 	license='MIT',
 	description='Surface Brightness Limit Calculator',
 	long_description=long_description,
